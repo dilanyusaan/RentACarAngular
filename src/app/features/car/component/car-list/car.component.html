@@ -1,0 +1,21 @@
+<div class="alert alert-primary" role="alert">
+    Cars 
+</div>
+<button (click)="btnClick()">Cars a git</button>
+
+<form class="w-50 me-3 mt-5 mb-5">
+  <input type="search" class="form-control" placeholder="Search..." [(ngModel)]=" text"  name="filterText"
+    id="filterText">
+</form>
+
+<div class="row">
+  <div *ngFor="let car of cars | filter:text"
+  class="card" style="width: 18rem;">
+  <img src="" class="card-img-top" alt="">
+    <div class="card-body">
+      <h5 class="card-title">{{car.model.name}}</h5>
+      <p class="card-text">{{car.imageUrl}}</p>
+      <a class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
